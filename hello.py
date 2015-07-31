@@ -53,3 +53,7 @@ def my_form_post():
 return str(sum(k for k in peaksdict))
 
 
+
+
+if __name__ == '__main__':
+    app.run()
