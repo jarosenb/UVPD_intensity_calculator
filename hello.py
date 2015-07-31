@@ -32,7 +32,8 @@ def my_form():
 
 @app.route('/input', methods=['POST'])
 def my_form_post():
-    return "hello"
+    seq = request.form['seq']
+    return seq
 
 
 
