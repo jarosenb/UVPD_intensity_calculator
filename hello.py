@@ -2,7 +2,7 @@ __author__ = 'jakerosenberg'
 from flask import Flask
 from flask import request
 from flask import render_template
-from hello2.py import add
+from hello2 import add
 
 
 app = Flask(__name__)
