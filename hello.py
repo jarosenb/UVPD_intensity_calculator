@@ -47,7 +47,7 @@ def my_form_post():
         except IndexError:
             pass
 
-return str(sum(k for k in peaksdict))
+    return str(sum(k for k in peaksdict))
 
 
 
