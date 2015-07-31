@@ -2,7 +2,7 @@ __author__ = 'jakerosenberg'
 from flask import Flask
 from flask import request
 from flask import render_template
-
+from hello2.py import add
 
 
 app = Flask(__name__)
@@ -47,7 +47,7 @@ def my_form_post():
         except IndexError:
             pass
 
-    return str(sum(k for k in peaksdict))
+    return str(add(1,sum(k for k in peaksdict)))
 
 
 
