@@ -33,7 +33,21 @@ def my_form():
 @app.route('/input', methods=['POST'])
 def my_form_post():
     seq = request.form['seq']
-    return seq
+    int = request.form['intensity']
+    qual= request.form['qual_output']
+    dtext = qual.split("\n")
+    peaksdict = {}
+    
+    for line in dtext:
+        ln = line.split('\t')
+        try:
+            peaksdict[float(ln[0])] = float(ln[1])
+        except ValueError:
+            pass
+        except IndexError:
+            pass
+
+return str(sum(k for k in peaksdict))
 
 
 
